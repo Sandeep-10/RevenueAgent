@@ -1,4 +1,4 @@
-﻿# ⚡ RevenueAgent: Autonomous Agentic Checkout & Mandate Security Gate
+# ⚡ RevenueAgent: Autonomous Agentic Checkout & Mandate Security Gate
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688.svg)](https://fastapi.tiangolo.com/)
@@ -9,6 +9,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > **RevenueAgent** is a zero-trust, conversational checkout engine for merchants on **Razorpay Test-Mode APIs**. It transforms traditional merchant catalogs into agentic, machine-transactable endpoints, grows Average Order Value (AOV) via deterministic bundle upsells, and enforces zero-trust financial boundaries via a **3-Tier Cryptographic Mandate Protocol** (NPCI UAP, ACP/AP2 ready).
+
+🎥 **[Watch Full End-to-End Demo Walkthrough Video](https://github.com/Sandeep-10/RevenueAgent/raw/main/revenue_agent_demo.webm)**
 
 ---
 
