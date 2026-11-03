@@ -101,7 +101,7 @@ def verify_razorpay_checkout_signature(order_id: str, payment_id: str, signature
 # -----------------------------------------------------------------------------
 
 STUDIO_LIGHT_HTML = """<!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -120,62 +120,62 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
     }
 
     body {
-      background-color: #080c14;
+      background-color: #f8fafc;
       background-image: 
-        radial-gradient(ellipse 900px 500px at 85% -5%, rgba(99, 102, 241, 0.16), transparent 70%),
-        radial-gradient(ellipse 700px 450px at 15% 105%, rgba(16, 185, 129, 0.12), transparent 70%),
-        radial-gradient(ellipse 800px 600px at 50% 50%, rgba(15, 23, 42, 0.6), transparent 100%);
+        radial-gradient(ellipse 900px 500px at 85% -5%, rgba(99, 102, 241, 0.08), transparent 70%),
+        radial-gradient(ellipse 700px 450px at 15% 105%, rgba(16, 185, 129, 0.06), transparent 70%),
+        radial-gradient(ellipse 800px 600px at 50% 50%, rgba(241, 245, 249, 0.7), transparent 100%);
       font-family: var(--font-body);
-      color: #f1f5f9;
+      color: #0f172a;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Ambient Tech Grid Background */
+    /* Ambient Clean Light Grid Background */
     .tech-grid {
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
       background-size: 36px 36px;
     }
 
-    /* Frosted Glass Panels & Cards */
+    /* Frosted Crystal Light Panels & Cards */
     .studio-panel {
-      background: rgba(13, 19, 33, 0.78);
+      background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.9);
       border-radius: 1.25rem;
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.06), 0 4px 6px -4px rgba(15, 23, 42, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.8);
     }
 
     .studio-card {
-      background: rgba(18, 26, 44, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 1rem;
-      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.04), 0 1px 4px -1px rgba(15, 23, 42, 0.02);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .studio-card:hover {
-      border-color: rgba(99, 102, 241, 0.4);
-      box-shadow: 0 8px 24px -4px rgba(99, 102, 241, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      border-color: rgba(99, 102, 241, 0.45);
+      box-shadow: 0 8px 24px -4px rgba(99, 102, 241, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
       transform: translateY(-1px);
     }
 
     .studio-btn-primary {
       background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
       color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 0.75rem;
       font-weight: 600;
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.35);
+      box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.25);
     }
 
     .studio-btn-primary:hover {
       background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
       transform: translateY(-1px);
-      box-shadow: 0 6px 20px 0 rgba(99, 102, 241, 0.45);
+      box-shadow: 0 6px 20px 0 rgba(99, 102, 241, 0.35);
     }
 
     .studio-btn-primary:active {
@@ -194,30 +194,30 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       font-size: 0.8rem;
       border-radius: 0.625rem;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(10, 15, 26, 0.6);
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
     }
     .markdown-content th {
-      background-color: rgba(30, 41, 59, 0.8);
+      background-color: #f1f5f9;
       font-weight: 600;
-      color: #94a3b8;
+      color: #475569;
       font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       padding: 0.55rem 0.75rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid #e2e8f0;
       text-align: left;
     }
     .markdown-content td {
       padding: 0.55rem 0.75rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      color: #e2e8f0;
+      border-bottom: 1px solid #f1f5f9;
+      color: #1e293b;
     }
     .markdown-content tr:last-child td {
       border-bottom: none;
     }
     .markdown-content tr:hover td {
-      background-color: rgba(51, 65, 85, 0.25);
+      background-color: #f8fafc;
     }
     .markdown-content p {
       margin-bottom: 0.45rem;
@@ -226,18 +226,18 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       margin-bottom: 0;
     }
     .markdown-content code {
-      background-color: rgba(30, 41, 59, 0.85);
-      color: #38bdf8;
+      background-color: #f1f5f9;
+      color: #4338ca;
       padding: 0.15rem 0.45rem;
       border-radius: 0.375rem;
       font-family: var(--font-mono);
       font-size: 0.85em;
       font-weight: 600;
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      border: 1px solid #e2e8f0;
     }
     .markdown-content hr {
       border: 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid #e2e8f0;
       margin: 0.75rem 0;
     }
     .markdown-content ul, .markdown-content ol {
@@ -252,7 +252,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
     }
     .markdown-content strong {
       font-weight: 700;
-      color: #ffffff;
+      color: #0f172a;
     }
 
     /* Custom Modern Slim Scrollbar */
@@ -261,11 +261,11 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       height: 5px;
     }
     .custom-scroll::-webkit-scrollbar-thumb {
-      background: rgba(148, 163, 184, 0.25);
+      background: rgba(148, 163, 184, 0.4);
       border-radius: 9999px;
     }
     .custom-scroll::-webkit-scrollbar-thumb:hover {
-      background: rgba(148, 163, 184, 0.45);
+      background: rgba(148, 163, 184, 0.6);
     }
     .custom-scroll::-webkit-scrollbar-track {
       background: transparent;
@@ -275,35 +275,35 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 <body class="min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white tech-grid">
 
   <!-- Top Cyber-FinTech Glass Header -->
-  <header class="border-b border-white/[0.08] bg-slate-950/70 backdrop-blur-xl sticky top-0 z-50">
+  <header class="border-b border-slate-200/90 bg-white/80 backdrop-blur-xl sticky top-0 z-50 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       
       <!-- Brand & Studio Title -->
       <div class="flex items-center space-x-3.5">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 flex items-center justify-center text-white text-base font-bold shadow-lg shadow-indigo-500/25 border border-white/20">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-500 flex items-center justify-center text-white text-base font-bold shadow-md shadow-indigo-500/20 border border-white/40">
           <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
         <div class="flex items-center space-x-2.5">
-          <span class="font-extrabold text-lg tracking-tight text-white">Revenue<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-400">Agent</span></span>
-          <span class="px-2.5 py-0.5 text-[10px] font-mono tracking-wide uppercase font-semibold rounded-full bg-slate-800/80 text-slate-300 border border-slate-700/80">Autonomous Mandate Rail</span>
+          <span class="font-extrabold text-lg tracking-tight text-slate-900">Revenue<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-emerald-600">Agent</span></span>
+          <span class="px-2.5 py-0.5 text-[10px] font-mono tracking-wide uppercase font-semibold rounded-full bg-slate-100 text-slate-700 border border-slate-200">Autonomous Mandate Rail</span>
         </div>
       </div>
 
       <!-- Live Environment Status Badges & Quick Action Controls -->
       <div class="flex items-center space-x-3 text-xs">
-        <div class="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium backdrop-blur-sm">
+        <div class="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium backdrop-blur-sm shadow-xs">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
           <span class="tracking-wide">Razorpay Test Mode Active</span>
         </div>
-        <button onclick="startNewOrder()" class="px-3.5 py-1.5 rounded-xl bg-indigo-600/20 text-indigo-300 font-semibold border border-indigo-500/30 hover:bg-indigo-600/30 hover:border-indigo-400/50 transition shadow-sm flex items-center space-x-1.5">
-          <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        <button onclick="startNewOrder()" class="px-3.5 py-1.5 rounded-xl bg-indigo-50 text-indigo-700 font-semibold border border-indigo-200 hover:bg-indigo-100 hover:border-indigo-300 transition shadow-xs flex items-center space-x-1.5 cursor-pointer">
+          <svg class="w-3.5 h-3.5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
           <span>New Order</span>
         </button>
-        <button onclick="refreshData()" class="px-3.5 py-1.5 rounded-xl bg-slate-900/80 text-slate-300 font-medium border border-slate-800 hover:bg-slate-800 hover:text-white transition shadow-sm flex items-center space-x-1.5">
-          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        <button onclick="refreshData()" class="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-700 font-medium border border-slate-200 hover:bg-slate-200 hover:text-slate-900 transition shadow-xs flex items-center space-x-1.5 cursor-pointer">
+          <svg class="w-3.5 h-3.5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
           <span>Sync State</span>
         </button>
       </div>
@@ -315,24 +315,24 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-5 w-full">
     <div class="studio-panel p-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
       <div class="flex items-center space-x-2.5">
-        <span class="font-semibold text-slate-400 uppercase tracking-wider text-[10px] flex items-center space-x-1">
-          <svg class="w-3 h-3 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <span class="font-semibold text-slate-500 uppercase tracking-wider text-[10px] flex items-center space-x-1">
+          <svg class="w-3 h-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           <span>Quick Flows:</span>
         </span>
-        <button onclick="sendQuickPrompt('I want wireless earbuds under ₹2,000.')" class="px-3 py-1.5 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/25 transition font-medium flex items-center space-x-1">
+        <button onclick="sendQuickPrompt('I want wireless earbuds under ₹2,000.')" class="px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 transition font-medium flex items-center space-x-1 cursor-pointer">
           <span>🎧 Earbuds + Case Bundle</span>
         </button>
-        <button onclick="sendQuickPrompt('Simulate order creation failure for graceful payment link fallback.')" class="px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/25 transition font-medium flex items-center space-x-1">
+        <button onclick="sendQuickPrompt('Simulate order creation failure for graceful payment link fallback.')" class="px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 transition font-medium flex items-center space-x-1 cursor-pointer">
           <span>⚠️ Test Failover Link</span>
         </button>
-        <button onclick="sendQuickPrompt('Refresh the product catalog using Firecrawl.')" class="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60 transition font-medium flex items-center space-x-1">
+        <button onclick="sendQuickPrompt('Refresh the product catalog using Firecrawl.')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition font-medium flex items-center space-x-1 cursor-pointer">
           <span>🔥 Firecrawl Refresh</span>
         </button>
       </div>
-      <div class="text-[11px] text-slate-400 font-mono flex items-center space-x-1.5 bg-slate-900/80 px-2.5 py-1 rounded-lg border border-slate-800">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+      <div class="text-[11px] text-slate-600 font-mono flex items-center space-x-1.5 bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
         <span>Active Buyer:</span>
-        <strong id="buyer-tag" class="text-indigo-300 font-semibold font-mono">buyer_42</strong>
+        <strong id="buyer-tag" class="text-indigo-600 font-semibold font-mono">buyer_42</strong>
       </div>
     </div>
   </div>
@@ -345,28 +345,28 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       
       <!-- Conversational Assistant Box -->
       <div class="studio-panel p-5 flex-1 flex flex-col space-y-4">
-        <div class="flex items-center justify-between border-b border-white/[0.06] pb-3.5">
+        <div class="flex items-center justify-between border-b border-slate-200/80 pb-3.5">
           <div class="flex items-center space-x-2.5">
             <span class="relative flex h-2.5 w-2.5">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-600"></span>
             </span>
-            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-200">AI Checkout Assistant</h2>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800">AI Checkout Assistant</h2>
           </div>
           <div class="flex items-center space-x-2">
-            <span class="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[10px] font-mono">gpt-oss-120b</span>
-            <span class="text-[11px] font-medium text-slate-400">Groq LLM Engine</span>
+            <span class="px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-200 text-[10px] font-mono">gpt-oss-120b</span>
+            <span class="text-[11px] font-medium text-slate-500">Groq LLM Engine</span>
           </div>
         </div>
 
         <!-- Chat Stream -->
-        <div id="chat-stream" class="flex-1 min-h-[340px] max-h-[460px] overflow-y-auto space-y-3.5 custom-scroll p-4 bg-slate-950/60 rounded-2xl border border-white/[0.05] text-sm shadow-inner">
+        <div id="chat-stream" class="flex-1 min-h-[340px] max-h-[460px] overflow-y-auto space-y-3.5 custom-scroll p-4 bg-slate-50/70 rounded-2xl border border-slate-200/80 text-sm shadow-inner">
           <div class="flex items-start space-x-3">
             <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-600 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono shadow-md shadow-indigo-500/20 border border-indigo-400/30">
               AI
             </div>
-            <div class="bg-slate-900/90 border border-slate-800/90 text-slate-200 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-lg max-w-[85%]">
-              <p>Welcome! I'm <strong class="text-white font-semibold">RevenueAgent</strong>. What would you like to purchase today? Tell me your product preferences and budget limit, and I will assemble an explainable cart mandate with verified bundle discounts.</p>
+            <div class="bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-sm max-w-[85%]">
+              <p>Welcome! I'm <strong class="text-slate-900 font-semibold">RevenueAgent</strong>. What would you like to purchase today? Tell me your product preferences and budget limit, and I will assemble an explainable cart mandate with verified bundle discounts.</p>
             </div>
           </div>
         </div>
@@ -377,12 +377,12 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             id="chat-input"
             type="text"
             placeholder="Type e.g. 'I want wireless earbuds under ₹2,000'..."
-            class="w-full bg-slate-900/90 border border-slate-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none pr-28 transition shadow-inner"
+            class="w-full bg-white border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-xl px-4 py-3.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none pr-28 transition shadow-xs"
           />
           <button
             type="submit"
             id="send-btn"
-            class="absolute right-2.5 top-4.5 px-4 py-1.5 studio-btn-primary text-xs flex items-center space-x-1.5"
+            class="absolute right-2.5 top-4.5 px-4 py-1.5 studio-btn-primary text-xs flex items-center space-x-1.5 cursor-pointer"
           >
             <span>Send</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -392,40 +392,40 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 
       <!-- Quick Interactive Catalog Grid -->
       <div class="studio-panel p-4 space-y-3">
-        <div class="flex items-center justify-between border-b border-white/[0.06] pb-2.5">
+        <div class="flex items-center justify-between border-b border-slate-200/80 pb-2.5">
           <div class="flex items-center space-x-2">
-            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Authoritative Product Catalog</h3>
+            <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-800">Authoritative Product Catalog</h3>
           </div>
-          <span class="text-[11px] text-slate-400 font-mono">Click tile to assemble cart</span>
+          <span class="text-[11px] text-slate-500 font-mono">Click tile to assemble cart</span>
         </div>
         <div class="grid grid-cols-2 gap-3 text-xs">
-          <button onclick="addCatalogItemToCart('prod_eb_01', 1)" class="studio-card p-3.5 text-left group">
-            <div class="font-semibold text-slate-100 group-hover:text-indigo-300 transition">AcousticBass Earbuds Pro</div>
-            <div class="text-emerald-400 text-[11px] font-mono mt-1 font-semibold flex items-center justify-between">
+          <button onclick="addCatalogItemToCart('prod_eb_01', 1)" class="studio-card p-3.5 text-left group cursor-pointer">
+            <div class="font-semibold text-slate-800 group-hover:text-indigo-600 transition">AcousticBass Earbuds Pro</div>
+            <div class="text-emerald-600 text-[11px] font-mono mt-1 font-semibold flex items-center justify-between">
               <span>₹1,799.00</span>
-              <span class="text-[10px] text-slate-400 font-sans group-hover:text-slate-300">Add to Cart →</span>
+              <span class="text-[10px] text-slate-500 font-sans group-hover:text-indigo-600">Add to Cart →</span>
             </div>
           </button>
-          <button onclick="addCatalogItemToCart('prod_eb_02', 1)" class="studio-card p-3.5 text-left group">
-            <div class="font-semibold text-slate-100 group-hover:text-indigo-300 transition">SonicLite Wireless Earbuds</div>
-            <div class="text-emerald-400 text-[11px] font-mono mt-1 font-semibold flex items-center justify-between">
+          <button onclick="addCatalogItemToCart('prod_eb_02', 1)" class="studio-card p-3.5 text-left group cursor-pointer">
+            <div class="font-semibold text-slate-800 group-hover:text-indigo-600 transition">SonicLite Wireless Earbuds</div>
+            <div class="text-emerald-600 text-[11px] font-mono mt-1 font-semibold flex items-center justify-between">
               <span>₹1,299.00</span>
-              <span class="text-[10px] text-slate-400 font-sans group-hover:text-slate-300">Add to Cart →</span>
+              <span class="text-[10px] text-slate-500 font-sans group-hover:text-indigo-600">Add to Cart →</span>
             </div>
           </button>
-          <button onclick="addCatalogItemToCart('prod_case_01', 1)" class="studio-card p-3.5 text-left group">
-            <div class="font-semibold text-slate-100 group-hover:text-indigo-300 transition">Silicone Protective Case</div>
-            <div class="text-slate-300 text-[11px] font-mono mt-1 flex items-center justify-between">
+          <button onclick="addCatalogItemToCart('prod_case_01', 1)" class="studio-card p-3.5 text-left group cursor-pointer">
+            <div class="font-semibold text-slate-800 group-hover:text-indigo-600 transition">Silicone Protective Case</div>
+            <div class="text-slate-600 text-[11px] font-mono mt-1 flex items-center justify-between">
               <span>₹399.00</span>
-              <span class="text-emerald-400 font-semibold text-[10px] bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">(10% upsell)</span>
+              <span class="text-emerald-700 font-semibold text-[10px] bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">(10% upsell)</span>
             </div>
           </button>
-          <button onclick="addCatalogItemToCart('prod_cable_01', 1)" class="studio-card p-3.5 text-left group">
-            <div class="font-semibold text-slate-100 group-hover:text-indigo-300 transition">Braided Type-C 60W Cable</div>
-            <div class="text-slate-300 text-[11px] font-mono mt-1 flex items-center justify-between">
+          <button onclick="addCatalogItemToCart('prod_cable_01', 1)" class="studio-card p-3.5 text-left group cursor-pointer">
+            <div class="font-semibold text-slate-800 group-hover:text-indigo-600 transition">Braided Type-C 60W Cable</div>
+            <div class="text-slate-600 text-[11px] font-mono mt-1 flex items-center justify-between">
               <span>₹249.00</span>
-              <span class="text-[10px] text-slate-400 font-sans group-hover:text-slate-300">Add to Cart →</span>
+              <span class="text-[10px] text-slate-500 font-sans group-hover:text-indigo-600">Add to Cart →</span>
             </div>
           </button>
         </div>
@@ -438,20 +438,20 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 
       <!-- Mandate Security Gate Panel -->
       <div class="studio-panel p-5 space-y-5">
-        <div class="flex items-center justify-between border-b border-white/[0.06] pb-3.5">
+        <div class="flex items-center justify-between border-b border-slate-200/80 pb-3.5">
           <div class="flex items-center space-x-2">
-            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-200">Mandate Security Gate</h2>
+            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800">Mandate Security Gate</h2>
           </div>
-          <span id="pipeline-status" class="px-2.5 py-0.5 text-[10px] font-mono font-bold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">ACTIVE</span>
+          <span id="pipeline-status" class="px-2.5 py-0.5 text-[10px] font-mono font-bold rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">ACTIVE</span>
         </div>
 
         <!-- 4-Stage State Progression Pipeline -->
         <div class="grid grid-cols-4 gap-2 text-center text-[10px] font-mono font-semibold">
-          <div id="step-intent" class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500 transition-all">1. INTENT</div>
-          <div id="step-cart" class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500 transition-all">2. CART DRAFT</div>
-          <div id="step-gate" class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500 transition-all">3. CONFIRMED</div>
-          <div id="step-pay" class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500 transition-all">4. CAPTURED</div>
+          <div id="step-intent" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 transition-all">1. INTENT</div>
+          <div id="step-cart" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 transition-all">2. CART DRAFT</div>
+          <div id="step-gate" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 transition-all">3. CONFIRMED</div>
+          <div id="step-pay" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 transition-all">4. CAPTURED</div>
         </div>
 
         <!-- Mandates Details Cards -->
@@ -459,12 +459,12 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           <!-- Intent Mandate -->
           <div class="studio-card p-4 flex justify-between items-center">
             <div>
-              <span class="text-slate-400 block text-[10px] uppercase font-semibold tracking-wider">Intent Mandate</span>
-              <strong id="card-intent-id" class="font-mono text-xs text-indigo-300">Waiting for goal...</strong>
+              <span class="text-slate-500 block text-[10px] uppercase font-semibold tracking-wider">Intent Mandate</span>
+              <strong id="card-intent-id" class="font-mono text-xs text-indigo-600">Waiting for goal...</strong>
             </div>
             <div class="text-right">
-              <span class="text-slate-400 block text-[10px] uppercase font-semibold tracking-wider">Budget Cap</span>
-              <span id="card-intent-budget" class="font-mono font-bold text-white text-sm">₹0.00</span>
+              <span class="text-slate-500 block text-[10px] uppercase font-semibold tracking-wider">Budget Cap</span>
+              <span id="card-intent-budget" class="font-mono font-bold text-slate-900 text-sm">₹0.00</span>
             </div>
           </div>
 
@@ -472,29 +472,29 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           <div class="studio-card p-4 space-y-3">
             <div class="flex justify-between items-center">
               <div>
-                <span class="text-slate-400 block text-[10px] uppercase font-semibold tracking-wider">Cart Mandate (Zero-Trust)</span>
-                <strong id="card-cart-id" class="font-mono text-xs text-indigo-300">Empty Cart</strong>
+                <span class="text-slate-500 block text-[10px] uppercase font-semibold tracking-wider">Cart Mandate (Zero-Trust)</span>
+                <strong id="card-cart-id" class="font-mono text-xs text-indigo-600">Empty Cart</strong>
               </div>
               <div class="text-right">
-                <span class="text-slate-400 block text-[10px] uppercase font-semibold tracking-wider">Cart Total</span>
-                <span id="card-cart-total" class="font-mono font-bold text-emerald-400 text-base">₹0.00</span>
+                <span class="text-slate-500 block text-[10px] uppercase font-semibold tracking-wider">Cart Total</span>
+                <span id="card-cart-total" class="font-mono font-bold text-emerald-600 text-base">₹0.00</span>
               </div>
             </div>
 
             <!-- Item Names & Quantity Breakdown -->
-            <div id="card-cart-items" class="pt-2.5 border-t border-white/[0.06] space-y-1.5 hidden">
+            <div id="card-cart-items" class="pt-2.5 border-t border-slate-200 space-y-1.5 hidden">
             </div>
 
             <!-- Confirmation Gate Box -->
-            <div id="approval-box" class="hidden p-3.5 bg-amber-500/10 border border-amber-500/30 rounded-xl space-y-2.5 backdrop-blur-sm">
-              <div class="flex items-center justify-between text-amber-300 text-xs font-semibold">
+            <div id="approval-box" class="hidden p-3.5 bg-amber-50 border border-amber-200 rounded-xl space-y-2.5 backdrop-blur-sm">
+              <div class="flex items-center justify-between text-amber-800 text-xs font-semibold">
                 <span class="flex items-center space-x-1.5">
-                  <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                  <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                   <span>Confirmation Gate: Explicit Approval Required</span>
                 </span>
-                <span class="font-mono text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30" id="approval-token-tag">tok_...</span>
+                <span class="font-mono text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded border border-amber-300" id="approval-token-tag">tok_...</span>
               </div>
-              <button onclick="approveCurrentCart()" class="w-full py-2.5 px-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 active:scale-[0.99] text-slate-950 font-bold rounded-lg transition text-xs flex items-center justify-center space-x-1.5 shadow-md shadow-amber-500/20 cursor-pointer">
+              <button onclick="approveCurrentCart()" class="w-full py-2.5 px-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 active:scale-[0.99] text-white font-bold rounded-lg transition text-xs flex items-center justify-center space-x-1.5 shadow-md shadow-amber-500/20 cursor-pointer">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span>Approve & Lock Cart Mandate</span>
               </button>
@@ -505,15 +505,15 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         <!-- Budget Utilization Metric -->
         <div class="studio-card p-4 space-y-2.5">
           <div class="flex justify-between text-xs font-mono">
-            <span class="text-slate-400 font-medium">Budget Utilization:</span>
-            <span id="utilization-pct" class="font-bold text-indigo-400">0%</span>
+            <span class="text-slate-500 font-medium">Budget Utilization:</span>
+            <span id="utilization-pct" class="font-bold text-indigo-600">0%</span>
           </div>
-          <div class="w-full bg-slate-900 rounded-full h-2.5 overflow-hidden border border-slate-800">
-            <div id="utilization-bar" class="bg-gradient-to-r from-indigo-500 via-sky-400 to-emerald-400 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+          <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border border-slate-200">
+            <div id="utilization-bar" class="bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
           </div>
-          <div class="flex justify-between text-[11px] text-slate-400 font-mono">
-            <span>Spent: <strong id="metric-spent" class="text-white">₹0.00</strong></span>
-            <span>Savings Remaining: <strong id="metric-savings" class="text-emerald-400 font-semibold">₹0.00</strong></span>
+          <div class="flex justify-between text-[11px] text-slate-500 font-mono">
+            <span>Spent: <strong id="metric-spent" class="text-slate-900">₹0.00</strong></span>
+            <span>Savings Remaining: <strong id="metric-savings" class="text-emerald-600 font-semibold">₹0.00</strong></span>
           </div>
         </div>
 
@@ -522,38 +522,38 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           id="checkout-btn"
           onclick="triggerRazorpayCheckout()"
           disabled
-          class="w-full py-4 px-6 bg-slate-900/60 text-slate-500 font-bold rounded-xl transition flex items-center justify-center space-x-2 cursor-not-allowed border border-slate-800"
+          class="w-full py-4 px-6 bg-slate-100 text-slate-400 font-bold rounded-xl transition flex items-center justify-center space-x-2 cursor-not-allowed border border-slate-200"
         >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
           <span id="checkout-btn-text">Waiting for Approved Cart...</span>
         </button>
 
         <!-- Payment Captured Success Card -->
-        <div id="payment-success-card" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 space-y-2 text-emerald-300 backdrop-blur-sm shadow-lg shadow-emerald-500/10">
+        <div id="payment-success-card" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 space-y-2 text-emerald-800 backdrop-blur-sm shadow-sm">
           <div class="flex items-center space-x-2">
-            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1-1 0 00-1.414-1.414L9 10.586 7.707 9.293a1-1 0 00-1.414 1.414l2 2a1-1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <h3 class="font-bold text-sm text-white">Payment Captured & Verified!</h3>
+            <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1-1 0 00-1.414-1.414L9 10.586 7.707 9.293a1-1 0 00-1.414 1.414l2 2a1-1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <h3 class="font-bold text-sm text-slate-900">Payment Captured & Verified!</h3>
           </div>
-          <p class="text-xs text-slate-300">Razorpay Payment ID: <strong id="success-pay-id" class="font-mono text-emerald-400">pay_...</strong></p>
-          <p class="text-xs text-slate-300">Payment Mandate Status: <strong class="font-mono text-emerald-400 font-bold">PAYMENT_CAPTURED</strong></p>
+          <p class="text-xs text-slate-700">Razorpay Payment ID: <strong id="success-pay-id" class="font-mono text-emerald-700">pay_...</strong></p>
+          <p class="text-xs text-slate-700">Payment Mandate Status: <strong class="font-mono text-emerald-700 font-bold">PAYMENT_CAPTURED</strong></p>
         </div>
       </div>
 
       <!-- Live Audit Stream -->
       <div class="studio-panel p-4 flex-1 space-y-3">
-        <div class="flex items-center justify-between border-b border-white/[0.06] pb-2.5">
+        <div class="flex items-center justify-between border-b border-slate-200/80 pb-2.5">
           <div class="flex items-center space-x-2">
-            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Live Audit Telemetry Stream</h3>
-            <span id="audit-badge" class="px-1.5 py-0.5 text-[9px] font-mono font-bold rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">CHAIN VERIFIED</span>
+            <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-800">Live Audit Telemetry Stream</h3>
+            <span id="audit-badge" class="px-1.5 py-0.5 text-[9px] font-mono font-bold rounded bg-emerald-50 text-emerald-700 border border-emerald-200">CHAIN VERIFIED</span>
           </div>
-          <button onclick="verifyAuditChainIntegrity()" class="text-[11px] font-mono text-indigo-400 hover:text-indigo-300 underline cursor-pointer flex items-center space-x-1">
+          <button onclick="verifyAuditChainIntegrity()" class="text-[11px] font-mono text-indigo-600 hover:text-indigo-800 underline cursor-pointer flex items-center space-x-1">
             <span>Verify Integrity</span>
           </button>
         </div>
-        <div id="audit-stream" class="space-y-2 max-h-44 overflow-y-auto custom-scroll text-[11px] font-mono text-slate-400 pr-1">
-          <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
-            <span class="text-indigo-400 font-bold font-mono">[BOOT]</span> Autonomous Mandate Rail Gateway Active.
+        <div id="audit-stream" class="space-y-2 max-h-44 overflow-y-auto custom-scroll text-[11px] font-mono text-slate-600 pr-1">
+          <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-indigo-600 font-bold font-mono">[BOOT]</span> Autonomous Mandate Rail Gateway Active.
           </div>
         </div>
       </div>
@@ -578,12 +578,12 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         const auditStream = document.getElementById("audit-stream");
         if (data.audit_log && data.audit_log.length > 0) {
           auditStream.innerHTML = data.audit_log.slice().reverse().map(e => `
-            <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700/80 transition">
+            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition">
               <div class="flex justify-between text-[10px] text-slate-500 pb-1">
-                <span class="text-indigo-400 font-bold font-mono">[${e.event_type}]</span>
+                <span class="text-indigo-600 font-bold font-mono">[${e.event_type}]</span>
                 <span class="font-mono text-slate-400">${new Date(e.timestamp).toLocaleTimeString()}</span>
               </div>
-              <p class="text-slate-300 font-sans text-xs leading-relaxed">${e.summary || JSON.stringify(e.data)}</p>
+              <p class="text-slate-700 font-sans text-xs leading-relaxed">${e.summary || JSON.stringify(e.data)}</p>
             </div>
           `).join("");
         }
@@ -596,11 +596,11 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           const latestIntent = userIntents[userIntents.length - 1];
           document.getElementById("card-intent-id").innerText = latestIntent.intent_mandate_id;
           document.getElementById("card-intent-budget").innerText = "₹" + (latestIntent.max_spend_inr).toFixed(2);
-          document.getElementById("step-intent").className = "p-2.5 rounded-xl bg-indigo-500/20 border border-indigo-500/60 text-indigo-300 font-bold shadow-sm shadow-indigo-500/20";
+          document.getElementById("step-intent").className = "p-2.5 rounded-xl bg-indigo-50 border border-indigo-300 text-indigo-700 font-bold shadow-xs";
         } else {
           document.getElementById("card-intent-id").innerText = "Waiting for goal...";
           document.getElementById("card-intent-budget").innerText = "₹0.00";
-          document.getElementById("step-intent").className = "p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500";
+          document.getElementById("step-intent").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
         }
 
         // Update Cart Card (Filtered for active buyer session)
@@ -613,7 +613,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           activeApprovalToken = latestCart.approval_token;
           document.getElementById("card-cart-id").innerText = latestCart.cart_mandate_id;
           document.getElementById("card-cart-total").innerText = "₹" + (latestCart.total_inr).toFixed(2);
-          document.getElementById("step-cart").className = "p-2.5 rounded-xl bg-indigo-500/20 border border-indigo-500/60 text-indigo-300 font-bold shadow-sm shadow-indigo-500/20";
+          document.getElementById("step-cart").className = "p-2.5 rounded-xl bg-indigo-50 border border-indigo-300 text-indigo-700 font-bold shadow-xs";
 
           // Match payment mandate SPECIFICALLY for this active cart!
           const allPayments = Object.values(data.payment_mandates || {});
@@ -622,22 +622,22 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           if (matchingPay && matchingPay.status === "PAYMENT_CAPTURED") {
             activePaymentMandateId = matchingPay.payment_mandate_id;
             document.getElementById("approval-box").classList.add("hidden");
-            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/60 text-emerald-300 font-bold shadow-sm shadow-emerald-500/20";
-            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/60 text-emerald-300 font-bold shadow-sm shadow-emerald-500/20";
+            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-700 font-bold shadow-xs";
+            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-700 font-bold shadow-xs";
             document.getElementById("payment-success-card").classList.remove("hidden");
             document.getElementById("success-pay-id").innerText = matchingPay.razorpay_payment_id || "pay_verified";
             disableCheckoutBtn("Payment Completed ✓");
           } else if (latestCart.status === "PENDING_APPROVAL") {
             document.getElementById("approval-box").classList.remove("hidden");
             document.getElementById("approval-token-tag").innerText = latestCart.approval_token;
-            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500";
-            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500";
+            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
+            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
             document.getElementById("payment-success-card").classList.add("hidden");
             disableCheckoutBtn("Awaiting Cart Approval");
           } else if (latestCart.status === "APPROVED" || latestCart.status === "PAYMENT_PENDING") {
             document.getElementById("approval-box").classList.add("hidden");
-            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/60 text-emerald-300 font-bold shadow-sm shadow-emerald-500/20";
-            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500";
+            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-700 font-bold shadow-xs";
+            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
             document.getElementById("payment-success-card").classList.add("hidden");
             if (matchingPay) {
               activePaymentMandateId = matchingPay.payment_mandate_id;
@@ -651,9 +651,9 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             if (latestCart.items && latestCart.items.length > 0) {
               itemsEl.classList.remove("hidden");
               itemsEl.innerHTML = latestCart.items.map(item => `
-                <div class="flex justify-between items-center text-xs text-slate-300 py-1 border-b border-white/[0.04] last:border-0">
-                  <span class="font-medium text-slate-200"><span class="px-1.5 py-0.5 rounded bg-slate-800/80 text-[10px] font-mono text-indigo-300 mr-1.5 border border-slate-700/60">${item.qty}×</span>${item.product_name || item.product_id}</span>
-                  <span class="font-mono text-emerald-400 font-semibold">₹${(item.line_total_inr || (item.line_total_paise / 100)).toFixed(2)}${item.discount_pct > 0 ? ` <span class="text-emerald-400 font-semibold text-[10px] bg-emerald-500/10 px-1 rounded ml-1">(${item.discount_pct}% OFF)</span>` : ''}</span>
+                <div class="flex justify-between items-center text-xs text-slate-700 py-1.5 border-b border-slate-100 last:border-0">
+                  <span class="font-medium text-slate-800"><span class="px-1.5 py-0.5 rounded bg-slate-100 text-[10px] font-mono text-indigo-700 mr-1.5 border border-slate-200">${item.qty}×</span>${item.product_name || item.product_id}</span>
+                  <span class="font-mono text-emerald-600 font-semibold">₹${(item.line_total_inr || (item.line_total_paise / 100)).toFixed(2)}${item.discount_pct > 0 ? ` <span class="text-emerald-700 font-semibold text-[10px] bg-emerald-50 px-1 py-0.5 rounded border border-emerald-200 ml-1">(${item.discount_pct}% OFF)</span>` : ''}</span>
                 </div>
               `).join("");
             } else {
@@ -682,9 +682,9 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             itemsEl.classList.add("hidden");
             itemsEl.innerHTML = "";
           }
-          document.getElementById("step-cart").className = "p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500";
-          document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500";
-          document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-500";
+          document.getElementById("step-cart").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
+          document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
+          document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
           document.getElementById("payment-success-card").classList.add("hidden");
           document.getElementById("approval-box").classList.add("hidden");
           document.getElementById("utilization-pct").innerText = "0%";
@@ -701,14 +701,14 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
     function enableCheckoutBtn() {
       const btn = document.getElementById("checkout-btn");
       btn.disabled = false;
-      btn.className = "w-full py-4 px-6 bg-gradient-to-r from-sky-500 via-indigo-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 active:scale-[0.99] text-white font-bold rounded-xl shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center space-x-2 cursor-pointer border border-sky-400/30";
+      btn.className = "w-full py-4 px-6 bg-gradient-to-r from-sky-500 via-indigo-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 active:scale-[0.99] text-white font-bold rounded-xl shadow-lg shadow-indigo-500/20 transition-all flex items-center justify-center space-x-2 cursor-pointer border border-indigo-400/30";
       document.getElementById("checkout-btn-text").innerText = "Pay with Razorpay Standard Checkout";
     }
 
     function disableCheckoutBtn(text) {
       const btn = document.getElementById("checkout-btn");
       btn.disabled = true;
-      btn.className = "w-full py-4 px-6 bg-slate-900/60 text-slate-500 font-bold rounded-xl transition flex items-center justify-center space-x-2 cursor-not-allowed border border-slate-800";
+      btn.className = "w-full py-4 px-6 bg-slate-100 text-slate-400 font-bold rounded-xl transition flex items-center justify-center space-x-2 cursor-not-allowed border border-slate-200";
       document.getElementById("checkout-btn-text").innerText = text;
     }
 
@@ -849,10 +849,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         : renderMarkdownText(text);
 
       div.innerHTML = `
-        <div class="w-8 h-8 rounded-xl ${isUser ? 'bg-gradient-to-tr from-slate-700 to-slate-800 text-white shadow-sm border border-slate-600' : 'bg-gradient-to-tr from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20 border border-indigo-400/30'} flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
+        <div class="w-8 h-8 rounded-xl ${isUser ? 'bg-slate-200 text-slate-700 shadow-xs border border-slate-300' : 'bg-gradient-to-tr from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20 border border-indigo-400/30'} flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
           ${isUser ? 'You' : 'AI'}
         </div>
-        <div class="${isUser ? 'bg-gradient-to-r from-indigo-600 via-indigo-600 to-blue-600 text-white rounded-2xl rounded-tr-sm shadow-lg shadow-indigo-600/20 border border-indigo-400/20' : 'bg-slate-900/90 border border-slate-800/90 text-slate-200 rounded-2xl rounded-tl-sm shadow-xl markdown-content'} px-4 py-3 leading-relaxed max-w-[85%]">
+        <div class="${isUser ? 'bg-indigo-600 text-white rounded-2xl rounded-tr-sm shadow-md shadow-indigo-500/20 border border-indigo-500' : 'bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm shadow-sm markdown-content'} px-4 py-3 leading-relaxed max-w-[85%]">
           ${contentHtml}
         </div>
       `;
@@ -891,8 +891,8 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-600 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono shadow-md shadow-indigo-500/20 border border-indigo-400/30">
               AI
             </div>
-            <div class="bg-slate-900/90 border border-slate-800/90 text-slate-200 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-lg max-w-[85%]">
-              <p>Fresh order session started! <strong class="text-indigo-300">Stage 1 (Intent Mandate)</strong> is active with budget cap <strong class="text-white font-mono">₹2,000.00</strong>. Tell me your product preferences or click a quick flow to assemble your cart mandate with bundle savings.</p>
+            <div class="bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-sm max-w-[85%]">
+              <p>Fresh order session started! <strong class="text-indigo-600 font-semibold">Stage 1 (Intent Mandate)</strong> is active with budget cap <strong class="text-slate-900 font-mono">₹2,000.00</strong>. Tell me your product preferences or click a quick flow to assemble your cart mandate with bundle savings.</p>
             </div>
           </div>
         `;
