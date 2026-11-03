@@ -270,6 +270,68 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
     .custom-scroll::-webkit-scrollbar-track {
       background: transparent;
     }
+
+    /* Apple Vision / macOS Glassmorphism for Icons & Badges */
+    .apple-glass-icon {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.4) 100%);
+      backdrop-filter: blur(16px) saturate(190%);
+      -webkit-backdrop-filter: blur(16px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 
+        0 4px 12px -2px rgba(15, 23, 42, 0.08),
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.04);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .apple-glass-icon:hover {
+      transform: translateY(-1px) scale(1.05);
+      box-shadow: 
+        0 6px 18px -2px rgba(13, 148, 136, 0.22),
+        inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+    }
+
+    .apple-glass-teal {
+      background: linear-gradient(135deg, rgba(204, 251, 241, 0.85) 0%, rgba(240, 253, 250, 0.45) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 
+        0 4px 14px -2px rgba(13, 148, 136, 0.18),
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95);
+      color: #0f766e;
+    }
+    .apple-glass-amber {
+      background: linear-gradient(135deg, rgba(254, 243, 199, 0.85) 0%, rgba(255, 251, 235, 0.45) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 
+        0 4px 14px -2px rgba(245, 158, 11, 0.18),
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95);
+      color: #b45309;
+    }
+    .apple-glass-emerald {
+      background: linear-gradient(135deg, rgba(209, 250, 229, 0.85) 0%, rgba(236, 253, 245, 0.45) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 
+        0 4px 14px -2px rgba(16, 185, 129, 0.18),
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95);
+      color: #047857;
+    }
+    .apple-glass-brand {
+      background: linear-gradient(135deg, rgba(13, 148, 136, 0.92) 0%, rgba(15, 118, 110, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      box-shadow: 
+        0 6px 20px -2px rgba(13, 148, 136, 0.35),
+        inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.75),
+        inset 0 -2px 3px 0 rgba(0, 0, 0, 0.15);
+    }
+    .apple-glass-avatar {
+      background: linear-gradient(135deg, rgba(13, 148, 136, 0.92) 0%, rgba(8, 145, 178, 0.92) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 
+        0 4px 14px -2px rgba(13, 148, 136, 0.28),
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.8);
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-teal-600 selection:text-white tech-grid">
@@ -280,7 +342,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       
       <!-- Brand & Studio Title -->
       <div class="flex items-center space-x-3.5">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-teal-600 via-teal-500 to-amber-500 flex items-center justify-center text-white text-base font-bold shadow-md shadow-teal-500/20 border border-white/40">
+        <div class="apple-glass-icon apple-glass-brand w-10 h-10 rounded-2xl flex items-center justify-center text-white text-base font-bold cursor-default">
           <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
         <div class="flex items-center space-x-2.5">
@@ -298,12 +360,16 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           </span>
           <span class="tracking-wide">Razorpay Test Mode Active</span>
         </div>
-        <button onclick="startNewOrder()" class="px-3.5 py-1.5 rounded-xl bg-teal-50 text-teal-700 font-semibold border border-teal-200 hover:bg-teal-100 hover:border-teal-300 transition shadow-xs flex items-center space-x-1.5 cursor-pointer">
-          <svg class="w-3.5 h-3.5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        <button onclick="startNewOrder()" class="px-3.5 py-1.5 rounded-xl bg-teal-50 text-teal-700 font-semibold border border-teal-200 hover:bg-teal-100 hover:border-teal-300 transition shadow-xs flex items-center space-x-2 cursor-pointer">
+          <div class="apple-glass-icon apple-glass-teal w-6 h-6 rounded-lg">
+            <svg class="w-3.5 h-3.5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </div>
           <span>New Order</span>
         </button>
-        <button onclick="refreshData()" class="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-700 font-medium border border-slate-200 hover:bg-slate-200 hover:text-slate-900 transition shadow-xs flex items-center space-x-1.5 cursor-pointer">
-          <svg class="w-3.5 h-3.5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        <button onclick="refreshData()" class="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-700 font-medium border border-slate-200 hover:bg-slate-200 hover:text-slate-900 transition shadow-xs flex items-center space-x-2 cursor-pointer">
+          <div class="apple-glass-icon w-6 h-6 rounded-lg text-slate-700">
+            <svg class="w-3.5 h-3.5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
           <span>Sync State</span>
         </button>
       </div>
@@ -315,8 +381,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-5 w-full">
     <div class="studio-panel p-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
       <div class="flex items-center space-x-2.5">
-        <span class="font-semibold text-slate-500 uppercase tracking-wider text-[10px] flex items-center space-x-1">
-          <svg class="w-3 h-3 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <span class="font-semibold text-slate-500 uppercase tracking-wider text-[10px] flex items-center space-x-1.5">
+          <div class="apple-glass-icon apple-glass-teal w-6 h-6 rounded-lg">
+            <svg class="w-3.5 h-3.5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
           <span>Quick Flows:</span>
         </span>
         <button onclick="sendQuickPrompt('I want wireless earbuds under ₹2,000.')" class="px-3 py-1.5 rounded-lg bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200 transition font-medium flex items-center space-x-1 cursor-pointer">
@@ -347,10 +415,11 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       <div class="studio-panel p-5 flex-1 flex flex-col space-y-4">
         <div class="flex items-center justify-between border-b border-slate-200/80 pb-3.5">
           <div class="flex items-center space-x-2.5">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-600"></span>
-            </span>
+            <div class="apple-glass-icon apple-glass-teal w-8 h-8 rounded-xl relative">
+              <span class="animate-ping absolute -top-0.5 -right-0.5 inline-flex h-2 w-2 rounded-full bg-teal-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-teal-600"></span>
+              <svg class="w-4 h-4 text-teal-700 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
             <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800">AI Checkout Assistant</h2>
           </div>
           <div class="flex items-center space-x-2">
@@ -362,7 +431,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         <!-- Chat Stream -->
         <div id="chat-stream" class="flex-1 min-h-[340px] max-h-[460px] overflow-y-auto space-y-3.5 custom-scroll p-4 bg-slate-50/70 rounded-2xl border border-slate-200/80 text-sm shadow-inner">
           <div class="flex items-start space-x-3">
-            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-teal-600 to-cyan-700 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono shadow-md shadow-teal-500/20 border border-teal-400/30">
+            <div class="apple-glass-icon apple-glass-avatar w-9 h-9 rounded-2xl text-white flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
               AI
             </div>
             <div class="bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-sm max-w-[85%]">
@@ -393,8 +462,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       <!-- Quick Interactive Catalog Grid -->
       <div class="studio-panel p-4 space-y-3">
         <div class="flex items-center justify-between border-b border-slate-200/80 pb-2.5">
-          <div class="flex items-center space-x-2">
-            <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <div class="flex items-center space-x-2.5">
+            <div class="apple-glass-icon apple-glass-teal w-7 h-7 rounded-xl">
+              <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            </div>
             <h3 class="text-xs font-bold uppercase tracking-wider text-slate-800">Authoritative Product Catalog</h3>
           </div>
           <span class="text-[11px] text-slate-500 font-mono">Click tile to assemble cart</span>
@@ -439,8 +510,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       <!-- Mandate Security Gate Panel -->
       <div class="studio-panel p-5 space-y-5">
         <div class="flex items-center justify-between border-b border-slate-200/80 pb-3.5">
-          <div class="flex items-center space-x-2">
-            <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <div class="flex items-center space-x-2.5">
+            <div class="apple-glass-icon apple-glass-teal w-7 h-7 rounded-xl">
+              <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
             <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800">Mandate Security Gate</h2>
           </div>
           <span id="pipeline-status" class="px-2.5 py-0.5 text-[10px] font-mono font-bold rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">ACTIVE</span>
@@ -488,8 +561,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             <!-- Confirmation Gate Box -->
             <div id="approval-box" class="hidden p-3.5 bg-amber-50/90 border border-amber-300 rounded-xl space-y-2.5 backdrop-blur-sm">
               <div class="flex items-center justify-between text-amber-900 text-xs font-semibold">
-                <span class="flex items-center space-x-1.5">
-                  <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <span class="flex items-center space-x-2">
+                  <div class="apple-glass-icon apple-glass-amber w-6 h-6 rounded-lg flex-shrink-0">
+                    <svg class="w-3.5 h-3.5 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                  </div>
                   <span>Confirmation Gate: Explicit Approval Required</span>
                 </span>
                 <span class="font-mono text-[10px] bg-amber-100 text-amber-900 px-2 py-0.5 rounded border border-amber-300" id="approval-token-tag">tok_...</span>
@@ -530,8 +605,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 
         <!-- Payment Captured Success Card -->
         <div id="payment-success-card" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 space-y-2 text-emerald-800 backdrop-blur-sm shadow-sm">
-          <div class="flex items-center space-x-2">
-            <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1-1 0 00-1.414-1.414L9 10.586 7.707 9.293a1-1 0 00-1.414 1.414l2 2a1-1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <div class="flex items-center space-x-2.5">
+            <div class="apple-glass-icon apple-glass-emerald w-8 h-8 rounded-xl flex-shrink-0">
+              <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1-1 0 00-1.414-1.414L9 10.586 7.707 9.293a1-1 0 00-1.414 1.414l2 2a1-1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            </div>
             <h3 class="font-bold text-sm text-slate-900">Payment Captured & Verified!</h3>
           </div>
           <p class="text-xs text-slate-700">Razorpay Payment ID: <strong id="success-pay-id" class="font-mono text-emerald-700">pay_...</strong></p>
@@ -542,8 +619,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       <!-- Live Audit Stream -->
       <div class="studio-panel p-4 flex-1 space-y-3">
         <div class="flex items-center justify-between border-b border-slate-200/80 pb-2.5">
-          <div class="flex items-center space-x-2">
-            <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <div class="flex items-center space-x-2.5">
+            <div class="apple-glass-icon apple-glass-teal w-7 h-7 rounded-xl">
+              <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
             <h3 class="text-xs font-bold uppercase tracking-wider text-slate-800">Live Audit Telemetry Stream</h3>
             <span id="audit-badge" class="px-1.5 py-0.5 text-[9px] font-mono font-bold rounded bg-emerald-50 text-emerald-700 border border-emerald-200">CHAIN VERIFIED</span>
           </div>
@@ -849,7 +928,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         : renderMarkdownText(text);
 
       div.innerHTML = `
-        <div class="w-8 h-8 rounded-xl ${isUser ? 'bg-slate-200 text-slate-700 shadow-xs border border-slate-300' : 'bg-gradient-to-tr from-teal-600 to-cyan-700 text-white shadow-md shadow-teal-500/20 border border-teal-400/30'} flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
+        <div class="apple-glass-icon ${isUser ? 'w-9 h-9 rounded-2xl text-slate-700' : 'apple-glass-avatar w-9 h-9 rounded-2xl text-white'} flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
           ${isUser ? 'You' : 'AI'}
         </div>
         <div class="${isUser ? 'bg-teal-700 text-white rounded-2xl rounded-tr-sm shadow-md shadow-teal-700/20 border border-teal-600' : 'bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm shadow-sm markdown-content'} px-4 py-3 leading-relaxed max-w-[85%]">
@@ -888,7 +967,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         const stream = document.getElementById("chat-stream");
         stream.innerHTML = `
           <div class="flex items-start space-x-3">
-            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-teal-600 to-cyan-700 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono shadow-md shadow-teal-500/20 border border-teal-400/30">
+            <div class="apple-glass-icon apple-glass-avatar w-9 h-9 rounded-2xl text-white flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
               AI
             </div>
             <div class="bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-sm max-w-[85%]">
