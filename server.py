@@ -128,9 +128,12 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
     body {
       background-color: #f8fafc;
       background-image: 
-        radial-gradient(ellipse 1200px 600px at 50% -80px, rgba(37, 99, 235, 0.06), transparent 70%),
-        radial-gradient(ellipse 900px 500px at 100% 100%, rgba(249, 115, 22, 0.04), transparent 70%),
-        radial-gradient(ellipse 1000px 600px at 0% 100%, rgba(238, 242, 255, 0.6), transparent 75%);
+        radial-gradient(circle 750px at 10% 10%, rgba(59, 130, 246, 0.15), transparent 70%),
+        radial-gradient(circle 650px at 90% 15%, rgba(139, 92, 246, 0.13), transparent 70%),
+        radial-gradient(circle 850px at 50% 50%, rgba(224, 231, 255, 0.45), transparent 75%),
+        radial-gradient(circle 650px at 15% 85%, rgba(249, 115, 22, 0.08), transparent 70%),
+        radial-gradient(circle 750px at 85% 85%, rgba(37, 99, 235, 0.12), transparent 70%);
+      background-attachment: fixed;
       font-family: var(--font-body);
       color: #0f172a;
       -webkit-font-smoothing: antialiased;
@@ -141,28 +144,41 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
       background-image: none;
     }
 
-    /* Frosted Crystal Light Panels & Cards */
+    /* Apple Liquid Glassmorphism Panels & Cards */
     .studio-panel {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(226, 232, 240, 0.85);
-      border-radius: 1.25rem;
-      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04), 0 4px 6px -4px rgba(15, 23, 42, 0.02), inset 0 1px 0 rgba(255, 255, 255, 1);
+      background: rgba(255, 255, 255, 0.68);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 1.5rem;
+      box-shadow: 
+        0 20px 40px -15px rgba(15, 23, 42, 0.05),
+        0 4px 12px -2px rgba(15, 23, 42, 0.02),
+        inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02);
     }
 
     .studio-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 1rem;
-      box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03);
+      background: rgba(255, 255, 255, 0.62);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 1.125rem;
+      box-shadow: 
+        0 2px 8px -1px rgba(15, 23, 42, 0.04),
+        0 1px 3px 0 rgba(15, 23, 42, 0.02),
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .studio-card:hover {
-      border-color: rgba(37, 99, 235, 0.4);
-      box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.88);
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 
+        0 12px 28px -6px rgba(37, 99, 235, 0.14),
+        0 4px 10px -2px rgba(15, 23, 42, 0.03),
+        inset 0 1.5px 2px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-2px);
     }
 
     .studio-btn-primary {
@@ -341,7 +357,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 <body class="min-h-screen flex flex-col selection:bg-blue-600 selection:text-white tech-grid">
 
   <!-- Top Cyber-FinTech Glass Header -->
-  <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur-xl sticky top-0 z-50 shadow-[0_1px_3px_0_rgba(0,0,0,0.02)]">
+  <header class="border-b border-white/60 bg-white/65 backdrop-blur-2xl sticky top-0 z-50 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.04)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       
       <!-- Brand & Studio Title -->
@@ -357,7 +373,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 
       <!-- Live Environment Status Badges & Quick Action Controls -->
       <div class="flex items-center space-x-2.5 text-xs">
-        <div class="hidden md:flex items-center space-x-2 px-2.5 py-1 rounded-full bg-slate-50/90 text-slate-600 border border-slate-200/70 font-medium shadow-2xs">
+        <div class="hidden md:flex items-center space-x-2 px-2.5 py-1 rounded-full bg-white/70 backdrop-blur-md text-slate-600 border border-white/80 font-medium shadow-2xs">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
@@ -365,14 +381,14 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           <span class="text-[11px] tracking-tight">Razorpay Test Mode Active</span>
         </div>
 
-        <div id="theme-indicator" class="flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-amber-50/70 text-amber-900 border border-amber-200/60 font-medium shadow-2xs">
+        <div id="theme-indicator" class="flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-amber-50/70 backdrop-blur-md text-amber-900 border border-amber-200/60 font-medium shadow-2xs">
           <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
           <span class="text-[11px] font-semibold">Light</span>
         </div>
 
         <div class="h-4 w-px bg-slate-200 mx-0.5"></div>
 
-        <button onclick="refreshData()" class="h-8 px-3 rounded-lg bg-white hover:bg-slate-50 text-slate-700 font-medium border border-slate-200/90 hover:border-slate-300 transition-all shadow-2xs flex items-center space-x-1.5 cursor-pointer text-xs active:scale-95">
+        <button onclick="refreshData()" class="h-8 px-3 rounded-lg bg-white/70 hover:bg-white/90 backdrop-blur-md text-slate-700 font-medium border border-white/80 hover:border-slate-300 transition-all shadow-2xs flex items-center space-x-1.5 cursor-pointer text-xs active:scale-95">
           <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
           <span>Sync State</span>
         </button>
@@ -388,23 +404,23 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 
   <!-- Interactive Scenario Bar -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-4 w-full">
-    <div class="bg-white/85 backdrop-blur-xl border border-slate-200/80 rounded-2xl px-3.5 py-2 flex flex-wrap items-center justify-between gap-2.5 text-xs shadow-[0_2px_12px_rgba(15,23,42,0.03)]">
+    <div class="bg-white/65 backdrop-blur-2xl border border-white/85 rounded-2xl px-3.5 py-2 flex flex-wrap items-center justify-between gap-2.5 text-xs shadow-[0_8px_30px_rgba(15,23,42,0.04)]">
       <div class="flex items-center space-x-2 flex-wrap gap-y-1">
         <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center space-x-1 mr-1">
           <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
           <span>Quick Flows:</span>
         </span>
-        <button onclick="sendQuickPrompt('I want wireless earbuds under ₹2,000.')" class="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-700 text-slate-600 border border-slate-200/80 hover:border-blue-200 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95">
+        <button onclick="sendQuickPrompt('I want wireless earbuds under ₹2,000.')" class="px-2.5 py-1 rounded-lg bg-white/70 hover:bg-blue-50/90 hover:text-blue-700 backdrop-blur-md text-slate-700 border border-white/80 hover:border-blue-200 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95 shadow-2xs">
           <span>🎧 Earbuds + Case</span>
         </button>
-        <button onclick="sendQuickPrompt('Simulate order creation failure for graceful payment link fallback.')" class="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-amber-50 hover:text-amber-800 text-slate-600 border border-slate-200/80 hover:border-amber-200 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95">
+        <button onclick="sendQuickPrompt('Simulate order creation failure for graceful payment link fallback.')" class="px-2.5 py-1 rounded-lg bg-white/70 hover:bg-amber-50/90 hover:text-amber-800 backdrop-blur-md text-slate-700 border border-white/80 hover:border-amber-200 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95 shadow-2xs">
           <span>⚠️ Failover Link</span>
         </button>
-        <button onclick="sendQuickPrompt('Refresh the product catalog using Firecrawl.')" class="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-slate-100 hover:text-slate-900 text-slate-600 border border-slate-200/80 hover:border-slate-300 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95">
+        <button onclick="sendQuickPrompt('Refresh the product catalog using Firecrawl.')" class="px-2.5 py-1 rounded-lg bg-white/70 hover:bg-white/95 hover:text-slate-900 backdrop-blur-md text-slate-700 border border-white/80 hover:border-slate-300 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95 shadow-2xs">
           <span>🔥 Firecrawl Refresh</span>
         </button>
       </div>
-      <div class="text-[11px] text-slate-500 font-mono flex items-center space-x-1.5 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200/70">
+      <div class="text-[11px] text-slate-500 font-mono flex items-center space-x-1.5 bg-white/70 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/80">
         <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
         <span class="text-slate-400">Buyer:</span>
         <strong id="buyer-tag" class="text-slate-800 font-semibold font-mono">buyer_42</strong>
@@ -436,12 +452,12 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         </div>
 
         <!-- Chat Stream -->
-        <div id="chat-stream" class="flex-1 min-h-[340px] max-h-[460px] overflow-y-auto space-y-3.5 custom-scroll p-4 bg-slate-50/70 rounded-2xl border border-slate-200/80 text-sm shadow-inner">
+        <div id="chat-stream" class="flex-1 min-h-[340px] max-h-[460px] overflow-y-auto space-y-3.5 custom-scroll p-4 bg-white/40 backdrop-blur-xl rounded-2xl border border-white/70 text-sm shadow-inner">
           <div class="flex items-start space-x-3">
             <div class="apple-glass-icon apple-glass-avatar w-9 h-9 rounded-2xl text-white flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
               AI
             </div>
-            <div class="bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-sm max-w-[85%]">
+            <div class="bg-white/85 backdrop-blur-xl border border-white/95 text-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-[0_2px_10px_rgba(15,23,42,0.03)] max-w-[85%]">
               <p>Welcome! I'm <strong class="text-slate-900 font-semibold">RevenueAgent</strong>. What would you like to purchase today? Tell me your product preferences and budget limit, and I will assemble an explainable cart mandate with verified bundle discounts.</p>
             </div>
           </div>
@@ -453,7 +469,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             id="chat-input"
             type="text"
             placeholder="Type e.g. 'I want wireless earbuds under ₹2,000'..."
-            class="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 rounded-xl px-4 py-3.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none pr-28 transition shadow-xs"
+            class="w-full bg-white/75 backdrop-blur-xl border border-white/85 focus:bg-white/95 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 rounded-xl px-4 py-3.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none pr-28 transition shadow-xs"
           />
           <button
             type="submit"
@@ -528,10 +544,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 
         <!-- 4-Stage State Progression Pipeline -->
         <div class="grid grid-cols-4 gap-2 text-center text-[10px] font-mono font-semibold">
-          <div id="step-intent" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 transition-all">1. INTENT</div>
-          <div id="step-cart" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 transition-all">2. CART DRAFT</div>
-          <div id="step-gate" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 transition-all">3. CONFIRMED</div>
-          <div id="step-pay" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 transition-all">4. CAPTURED</div>
+          <div id="step-intent" class="p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400 transition-all">1. INTENT</div>
+          <div id="step-cart" class="p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400 transition-all">2. CART DRAFT</div>
+          <div id="step-gate" class="p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400 transition-all">3. CONFIRMED</div>
+          <div id="step-pay" class="p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400 transition-all">4. CAPTURED</div>
         </div>
 
         <!-- Mandates Details Cards -->
@@ -566,7 +582,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             </div>
 
             <!-- Confirmation Gate Box -->
-            <div id="approval-box" class="hidden p-3.5 bg-amber-50/90 border border-amber-300 rounded-xl space-y-2.5 backdrop-blur-sm">
+            <div id="approval-box" class="hidden p-3.5 bg-amber-50/85 border border-amber-300/80 rounded-xl space-y-2.5 backdrop-blur-xl shadow-xs">
               <div class="flex items-center justify-between text-amber-900 text-xs font-semibold">
                 <span class="flex items-center space-x-2">
                   <div class="apple-glass-icon apple-glass-amber w-6 h-6 rounded-lg flex-shrink-0">
@@ -574,7 +590,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
                   </div>
                   <span>Confirmation Gate: Explicit Approval Required</span>
                 </span>
-                <span class="font-mono text-[10px] bg-amber-100 text-amber-900 px-2 py-0.5 rounded border border-amber-300" id="approval-token-tag">tok_...</span>
+                <span class="font-mono text-[10px] bg-amber-100/90 text-amber-900 px-2 py-0.5 rounded border border-amber-300/80" id="approval-token-tag">tok_...</span>
               </div>
               <button onclick="approveCurrentCart()" class="w-full py-2.5 px-3 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-orange-500 active:scale-[0.99] text-white font-bold rounded-lg transition text-xs flex items-center justify-center space-x-1.5 shadow-md shadow-orange-500/25 cursor-pointer">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -590,7 +606,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             <span class="text-slate-500 font-medium">Budget Utilization:</span>
             <span id="utilization-pct" class="font-bold text-blue-700">0%</span>
           </div>
-          <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border border-slate-200">
+          <div class="w-full bg-slate-200/60 rounded-full h-2.5 overflow-hidden border border-white/70">
             <div id="utilization-bar" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
           </div>
           <div class="flex justify-between text-[11px] text-slate-500 font-mono">
@@ -611,7 +627,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         </button>
 
         <!-- Payment Captured Success Card -->
-        <div id="payment-success-card" class="hidden p-4 rounded-xl bg-indigo-50/90 border border-indigo-200 space-y-2 text-indigo-900 backdrop-blur-sm shadow-sm">
+        <div id="payment-success-card" class="hidden p-4 rounded-xl bg-indigo-50/85 border border-indigo-200/90 space-y-2 text-indigo-900 backdrop-blur-xl shadow-xs">
           <div class="flex items-center space-x-2.5">
             <div class="apple-glass-icon apple-glass-indigo w-8 h-8 rounded-xl flex-shrink-0">
               <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1-1 0 00-1.414-1.414L9 10.586 7.707 9.293a1-1 0 00-1.414 1.414l2 2a1-1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
@@ -638,7 +654,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           </button>
         </div>
         <div id="audit-stream" class="space-y-2 max-h-44 overflow-y-auto custom-scroll text-[11px] font-mono text-slate-600 pr-1">
-          <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="p-2.5 rounded-xl bg-white/60 backdrop-blur-md border border-white/80">
             <span class="text-blue-700 font-bold font-mono">[BOOT]</span> Autonomous Mandate Rail Gateway Active.
           </div>
         </div>
@@ -664,7 +680,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         const auditStream = document.getElementById("audit-stream");
         if (data.audit_log && data.audit_log.length > 0) {
           auditStream.innerHTML = data.audit_log.slice().reverse().map(e => `
-            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-200 transition">
+            <div class="p-2.5 rounded-xl bg-white/60 backdrop-blur-md border border-white/80 hover:border-blue-200 transition shadow-2xs">
               <div class="flex justify-between text-[10px] text-slate-500 pb-1">
                 <span class="text-blue-700 font-bold font-mono">[${e.event_type}]</span>
                 <span class="font-mono text-slate-400">${new Date(e.timestamp).toLocaleTimeString()}</span>
@@ -682,11 +698,11 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           const latestIntent = userIntents[userIntents.length - 1];
           document.getElementById("card-intent-id").innerText = latestIntent.intent_mandate_id;
           document.getElementById("card-intent-budget").innerText = "₹" + (latestIntent.max_spend_inr).toFixed(2);
-          document.getElementById("step-intent").className = "p-2.5 rounded-xl bg-blue-50 border border-blue-300 text-blue-800 font-bold shadow-xs";
+          document.getElementById("step-intent").className = "p-2.5 rounded-xl bg-blue-50/80 backdrop-blur-md border border-blue-300/80 text-blue-800 font-bold shadow-xs";
         } else {
           document.getElementById("card-intent-id").innerText = "Waiting for goal...";
           document.getElementById("card-intent-budget").innerText = "₹0.00";
-          document.getElementById("step-intent").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
+          document.getElementById("step-intent").className = "p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400";
         }
 
         // Update Cart Card (Filtered for active buyer session)
@@ -699,7 +715,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           activeApprovalToken = latestCart.approval_token;
           document.getElementById("card-cart-id").innerText = latestCart.cart_mandate_id;
           document.getElementById("card-cart-total").innerText = "₹" + (latestCart.total_inr).toFixed(2);
-          document.getElementById("step-cart").className = "p-2.5 rounded-xl bg-blue-50 border border-blue-300 text-blue-800 font-bold shadow-xs";
+          document.getElementById("step-cart").className = "p-2.5 rounded-xl bg-blue-50/80 backdrop-blur-md border border-blue-300/80 text-blue-800 font-bold shadow-xs";
 
           // Match payment mandate SPECIFICALLY for this active cart!
           const allPayments = Object.values(data.payment_mandates || {});
@@ -708,22 +724,22 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
           if (matchingPay && matchingPay.status === "PAYMENT_CAPTURED") {
             activePaymentMandateId = matchingPay.payment_mandate_id;
             document.getElementById("approval-box").classList.add("hidden");
-            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-indigo-50 border border-indigo-300 text-indigo-700 font-bold shadow-xs";
-            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-indigo-50 border border-indigo-300 text-indigo-700 font-bold shadow-xs";
+            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-indigo-50/80 backdrop-blur-md border border-indigo-300/80 text-indigo-700 font-bold shadow-xs";
+            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-indigo-50/80 backdrop-blur-md border border-indigo-300/80 text-indigo-700 font-bold shadow-xs";
             document.getElementById("payment-success-card").classList.remove("hidden");
             document.getElementById("success-pay-id").innerText = matchingPay.razorpay_payment_id || "pay_verified";
             disableCheckoutBtn("Payment Completed ✓");
           } else if (latestCart.status === "PENDING_APPROVAL") {
             document.getElementById("approval-box").classList.remove("hidden");
             document.getElementById("approval-token-tag").innerText = latestCart.approval_token;
-            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
-            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
+            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400";
+            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400";
             document.getElementById("payment-success-card").classList.add("hidden");
             disableCheckoutBtn("Awaiting Cart Approval");
           } else if (latestCart.status === "APPROVED" || latestCart.status === "PAYMENT_PENDING") {
             document.getElementById("approval-box").classList.add("hidden");
-            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-indigo-50 border border-indigo-300 text-indigo-700 font-bold shadow-xs";
-            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
+            document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-indigo-50/80 backdrop-blur-md border border-indigo-300/80 text-indigo-700 font-bold shadow-xs";
+            document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400";
             document.getElementById("payment-success-card").classList.add("hidden");
             if (matchingPay) {
               activePaymentMandateId = matchingPay.payment_mandate_id;
@@ -768,9 +784,9 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             itemsEl.classList.add("hidden");
             itemsEl.innerHTML = "";
           }
-          document.getElementById("step-cart").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
-          document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
-          document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400";
+          document.getElementById("step-cart").className = "p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400";
+          document.getElementById("step-gate").className = "p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400";
+          document.getElementById("step-pay").className = "p-2.5 rounded-xl bg-white/50 backdrop-blur-md border border-white/70 text-slate-400";
           document.getElementById("payment-success-card").classList.add("hidden");
           document.getElementById("approval-box").classList.add("hidden");
           document.getElementById("utilization-pct").innerText = "0%";
@@ -938,7 +954,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
         <div class="apple-glass-icon ${isUser ? 'w-9 h-9 rounded-2xl text-slate-700' : 'apple-glass-avatar w-9 h-9 rounded-2xl text-white'} flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
           ${isUser ? 'You' : 'AI'}
         </div>
-        <div class="${isUser ? 'bg-blue-600 text-white rounded-2xl rounded-tr-sm shadow-md shadow-blue-600/20 border border-blue-500' : 'bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm shadow-sm markdown-content'} px-4 py-3 leading-relaxed max-w-[85%]">
+        <div class="${isUser ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl rounded-tr-sm shadow-md shadow-blue-600/25 border border-blue-400/30' : 'bg-white/85 backdrop-blur-xl border border-white/95 text-slate-800 rounded-2xl rounded-tl-sm shadow-[0_2px_10px_rgba(15,23,42,0.03)] markdown-content'} px-4 py-3 leading-relaxed max-w-[85%]">
           ${contentHtml}
         </div>
       `;
@@ -977,7 +993,7 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             <div class="apple-glass-icon apple-glass-avatar w-9 h-9 rounded-2xl text-white flex items-center justify-center flex-shrink-0 text-xs font-bold font-mono">
               AI
             </div>
-            <div class="bg-white border border-slate-200/90 text-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-sm max-w-[85%]">
+            <div class="bg-white/85 backdrop-blur-xl border border-white/95 text-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 leading-relaxed shadow-[0_2px_10px_rgba(15,23,42,0.03)] max-w-[85%]">
               <p>Fresh order session started! <strong class="text-blue-700 font-semibold">Stage 1 (Intent Mandate)</strong> is active with budget cap <strong class="text-slate-900 font-mono">₹2,000.00</strong>. Tell me your product preferences or click a quick flow to assemble your cart mandate with bundle savings.</p>
             </div>
           </div>
