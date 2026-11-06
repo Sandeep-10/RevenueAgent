@@ -341,44 +341,45 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 <body class="min-h-screen flex flex-col selection:bg-blue-600 selection:text-white tech-grid">
 
   <!-- Top Cyber-FinTech Glass Header -->
-  <header class="border-b border-slate-200/90 bg-white/80 backdrop-blur-xl sticky top-0 z-50 shadow-xs">
+  <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur-xl sticky top-0 z-50 shadow-[0_1px_3px_0_rgba(0,0,0,0.02)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       
       <!-- Brand & Studio Title -->
-      <div class="flex items-center space-x-3.5">
-        <div class="apple-glass-icon apple-glass-brand w-10 h-10 rounded-2xl flex items-center justify-center text-white text-base font-bold cursor-default">
-          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <div class="flex items-center space-x-3">
+        <div class="apple-glass-icon apple-glass-brand w-9 h-9 rounded-xl flex items-center justify-center text-white text-base font-bold shadow-[0_2px_10px_rgba(37,99,235,0.25)] cursor-default">
+          <svg class="w-4.5 h-4.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-        <div class="flex items-center space-x-2.5">
-          <span class="font-extrabold text-lg tracking-tight text-slate-900">Revenue<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">Agent</span></span>
-          <span class="px-2.5 py-0.5 text-[10px] font-mono tracking-wide uppercase font-semibold rounded-full bg-blue-50 text-blue-800 border border-blue-200">Autonomous Mandate Rail</span>
+        <div class="flex items-center space-x-2">
+          <span class="font-extrabold text-[17px] tracking-tight text-slate-900">Revenue<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">Agent</span></span>
+          <span class="hidden sm:inline-flex items-center px-2 py-0.5 text-[10px] font-mono tracking-wide uppercase font-semibold rounded-md bg-blue-50/80 text-blue-700 border border-blue-200/60">Mandate Rail</span>
         </div>
       </div>
 
       <!-- Live Environment Status Badges & Quick Action Controls -->
-      <div class="flex items-center space-x-3 text-xs">
-        <div class="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-medium backdrop-blur-sm shadow-xs">
+      <div class="flex items-center space-x-2.5 text-xs">
+        <div class="hidden md:flex items-center space-x-2 px-2.5 py-1 rounded-full bg-slate-50/90 text-slate-600 border border-slate-200/70 font-medium shadow-2xs">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
           </span>
-          <span class="tracking-wide">Razorpay Test Mode Active</span>
+          <span class="text-[11px] tracking-tight">Razorpay Test Mode Active</span>
         </div>
-        <div id="theme-indicator" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-amber-50/80 text-amber-800 border border-amber-200/80 font-medium shadow-2xs backdrop-blur-sm">
-          <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
-          <span class="text-[11px] font-bold tracking-tight">Light Mode</span>
+
+        <div id="theme-indicator" class="flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-amber-50/70 text-amber-900 border border-amber-200/60 font-medium shadow-2xs">
+          <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+          <span class="text-[11px] font-semibold">Light</span>
         </div>
-        <button onclick="startNewOrder()" class="px-3.5 py-1.5 rounded-xl bg-blue-50 text-blue-700 font-semibold border border-blue-200 hover:bg-blue-100 hover:border-blue-300 transition shadow-xs flex items-center space-x-2 cursor-pointer">
-          <div class="apple-glass-icon apple-glass-blue w-6 h-6 rounded-lg">
-            <svg class="w-3.5 h-3.5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-          </div>
-          <span>New Order</span>
-        </button>
-        <button onclick="refreshData()" class="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-700 font-medium border border-slate-200 hover:bg-slate-200 hover:text-slate-900 transition shadow-xs flex items-center space-x-2 cursor-pointer">
-          <div class="apple-glass-icon w-6 h-6 rounded-lg text-slate-700">
-            <svg class="w-3.5 h-3.5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-          </div>
+
+        <div class="h-4 w-px bg-slate-200 mx-0.5"></div>
+
+        <button onclick="refreshData()" class="h-8 px-3 rounded-lg bg-white hover:bg-slate-50 text-slate-700 font-medium border border-slate-200/90 hover:border-slate-300 transition-all shadow-2xs flex items-center space-x-1.5 cursor-pointer text-xs active:scale-95">
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
           <span>Sync State</span>
+        </button>
+
+        <button onclick="startNewOrder()" class="h-8 px-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 active:scale-95 text-white font-semibold transition-all shadow-[0_2px_8px_rgba(37,99,235,0.28)] flex items-center space-x-1.5 cursor-pointer text-xs">
+          <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4"/></svg>
+          <span>New Order</span>
         </button>
       </div>
 
@@ -386,29 +387,27 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
   </header>
 
   <!-- Interactive Scenario Bar -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-5 w-full">
-    <div class="studio-panel p-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
-      <div class="flex items-center space-x-2.5">
-        <span class="font-semibold text-slate-500 uppercase tracking-wider text-[10px] flex items-center space-x-1.5">
-          <div class="apple-glass-icon apple-glass-blue w-6 h-6 rounded-lg">
-            <svg class="w-3.5 h-3.5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-4 w-full">
+    <div class="bg-white/85 backdrop-blur-xl border border-slate-200/80 rounded-2xl px-3.5 py-2 flex flex-wrap items-center justify-between gap-2.5 text-xs shadow-[0_2px_12px_rgba(15,23,42,0.03)]">
+      <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center space-x-1 mr-1">
+          <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
           <span>Quick Flows:</span>
         </span>
-        <button onclick="sendQuickPrompt('I want wireless earbuds under ₹2,000.')" class="px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-200 transition font-medium flex items-center space-x-1 cursor-pointer">
-          <span>🎧 Earbuds + Case Bundle</span>
+        <button onclick="sendQuickPrompt('I want wireless earbuds under ₹2,000.')" class="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-700 text-slate-600 border border-slate-200/80 hover:border-blue-200 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95">
+          <span>🎧 Earbuds + Case</span>
         </button>
-        <button onclick="sendQuickPrompt('Simulate order creation failure for graceful payment link fallback.')" class="px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 transition font-medium flex items-center space-x-1 cursor-pointer">
-          <span>⚠️ Test Failover Link</span>
+        <button onclick="sendQuickPrompt('Simulate order creation failure for graceful payment link fallback.')" class="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-amber-50 hover:text-amber-800 text-slate-600 border border-slate-200/80 hover:border-amber-200 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95">
+          <span>⚠️ Failover Link</span>
         </button>
-        <button onclick="sendQuickPrompt('Refresh the product catalog using Firecrawl.')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition font-medium flex items-center space-x-1 cursor-pointer">
+        <button onclick="sendQuickPrompt('Refresh the product catalog using Firecrawl.')" class="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-slate-100 hover:text-slate-900 text-slate-600 border border-slate-200/80 hover:border-slate-300 transition-all font-medium text-[11px] flex items-center space-x-1 cursor-pointer active:scale-95">
           <span>🔥 Firecrawl Refresh</span>
         </button>
       </div>
-      <div class="text-[11px] text-slate-600 font-mono flex items-center space-x-1.5 bg-blue-50/60 px-2.5 py-1 rounded-lg border border-blue-200">
+      <div class="text-[11px] text-slate-500 font-mono flex items-center space-x-1.5 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200/70">
         <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-        <span>Active Buyer:</span>
-        <strong id="buyer-tag" class="text-blue-800 font-semibold font-mono">buyer_42</strong>
+        <span class="text-slate-400">Buyer:</span>
+        <strong id="buyer-tag" class="text-slate-800 font-semibold font-mono">buyer_42</strong>
       </div>
     </div>
   </div>
