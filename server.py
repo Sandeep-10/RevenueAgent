@@ -105,11 +105,17 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="light"/>
   <title>RevenueAgent — Autonomous Mandate Rail & Checkout Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -122,30 +128,27 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
     body {
       background-color: #f8fafc;
       background-image: 
-        radial-gradient(ellipse 900px 500px at 85% -5%, rgba(13, 148, 136, 0.10), transparent 70%),
-        radial-gradient(ellipse 700px 450px at 15% 105%, rgba(249, 115, 22, 0.08), transparent 70%),
-        radial-gradient(ellipse 800px 600px at 50% 50%, rgba(240, 253, 250, 0.6), transparent 100%);
+        radial-gradient(ellipse 1200px 600px at 50% -80px, rgba(13, 148, 136, 0.06), transparent 70%),
+        radial-gradient(ellipse 900px 500px at 100% 100%, rgba(249, 115, 22, 0.04), transparent 70%),
+        radial-gradient(ellipse 1000px 600px at 0% 100%, rgba(240, 253, 250, 0.6), transparent 75%);
       font-family: var(--font-body);
       color: #0f172a;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Ambient Clean Light Grid Background */
+    /* Ambient Clean Light Texture (Pristine Apple Surface) */
     .tech-grid {
-      background-image: 
-        linear-gradient(to right, rgba(13, 148, 136, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(13, 148, 136, 0.04) 1px, transparent 1px);
-      background-size: 36px 36px;
+      background-image: none;
     }
 
     /* Frosted Crystal Light Panels & Cards */
     .studio-panel {
-      background: rgba(255, 255, 255, 0.90);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(204, 251, 241, 0.7);
+      border: 1px solid rgba(226, 232, 240, 0.85);
       border-radius: 1.25rem;
-      box-shadow: 0 10px 30px -10px rgba(13, 148, 136, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04), 0 4px 6px -4px rgba(15, 23, 42, 0.02), inset 0 1px 0 rgba(255, 255, 255, 1);
     }
 
     .studio-card {
@@ -359,6 +362,10 @@ STUDIO_LIGHT_HTML = """<!DOCTYPE html>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
           <span class="tracking-wide">Razorpay Test Mode Active</span>
+        </div>
+        <div id="theme-indicator" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-amber-50/80 text-amber-800 border border-amber-200/80 font-medium shadow-2xs backdrop-blur-sm">
+          <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+          <span class="text-[11px] font-bold tracking-tight">Light Mode</span>
         </div>
         <button onclick="startNewOrder()" class="px-3.5 py-1.5 rounded-xl bg-teal-50 text-teal-700 font-semibold border border-teal-200 hover:bg-teal-100 hover:border-teal-300 transition shadow-xs flex items-center space-x-2 cursor-pointer">
           <div class="apple-glass-icon apple-glass-teal w-6 h-6 rounded-lg">
